@@ -9,12 +9,14 @@ jobs:
             matrix:
                 python-version: [3.9.0]
         steps:
+          - name: Checkout
+            uses: actions/checkout@v2
           - name: Set up Python ${{ matrix.python-version }}
             uses: actions/setup-python@v2
             with:
               python-version: ${{ matrix.python-version }}
           - name: Install Dependencies
             run: pip install pytest
-          - name: unittest
+          - name: pytest
             run: pytest
 
