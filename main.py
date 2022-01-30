@@ -1,8 +1,6 @@
-def print_massage(massage: str):
-    print(massage)
-    return
+from collections import Counter
 
 
-if __name__ == "__main__":
-    massage = "hello world"
-    print_massage(massage)
+def count_words(sentence: str) -> dict:
+    c = Counter(sentence.split())
+    return dict(c)
