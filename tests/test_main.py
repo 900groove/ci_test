@@ -9,4 +9,4 @@ class TestCountWords(unittest.TestCase):
 
     def test_count_words(self):
         c = count_words(self.text)
-        self.assertTrue(isinstance(c, list))
+        self.assertTrue(isinstance(c, dict))
